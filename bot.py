@@ -11,6 +11,8 @@ from telegram.ext import (
     ContextTypes,
     ConversationHandler,
 )
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.WARNING
@@ -264,7 +266,7 @@ async def show_env_options(update: Update, context: ContextTypes.DEFAULT_TYPE, p
     
     reply_markup = InlineKeyboardMarkup(keyboard)
     total_pages = (len(env_vars) + ENVS_PER_PAGE - 1) // ENVS_PER_PAGE or 1
-    message_text = f"ENVs for `{app_name}` (Page {page + 1}/{total_pages}):"
+    message_text = f"Tap on a value to update it.\nENVs for `{app_name}` (Page {page + 1}/{total_pages}):"
 
     if query:
         await query.edit_message_text(message_text, reply_markup=reply_markup, parse_mode='Markdown')
