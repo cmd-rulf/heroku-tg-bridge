@@ -19,9 +19,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN")
-HEROKU_AUTH_TOKEN = os.environ.get("HEROKU_AUTH_TOKEN")
-BOT_PASSWORD = os.environ.get("BOT_PASSWORD")
+TELEGRAM_BOT_TOKEN = os.environ.get("7344124882:AAG1Y8tpX3JwzVmgyP_0jWzW_Giagzf4GsU")
+HEROKU_AUTH_TOKEN = os.environ.get("HRKU-AA05n85j1FbxCI9J8_R84BnPrqWcs1QKeS3MxKY2ndfw_____wCCykuNVatQ")
+BOT_PASSWORD = os.environ.get("Rulf336")
 ENVS_PER_PAGE = 10
 
 (
